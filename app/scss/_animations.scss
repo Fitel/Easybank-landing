@@ -1,3 +1,8 @@
+.has-fade {
+    visibility: hidden;
+    z-index: 1;
+}
+
 @keyframes fade-in {
     from {
         visibility: hidden;
@@ -10,6 +15,7 @@
     }
 
     to {
+        visibility: visible;
         opacity: 1;
     }
 }

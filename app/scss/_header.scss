@@ -2,7 +2,7 @@
 
     &.open {
 
-        .header__menu {
+        .header__toggle {
             > span:first-child {
                 transform: rotate(45deg);
             }
@@ -21,7 +21,7 @@
     .overlay {
         visibility: hidden;
         position: fixed;
-        top: 3.75rem;
+        top: 3.8125rem;
         right: 0px;
         bottom: 0px;
         left: 0px;
@@ -33,7 +33,10 @@
     }
 
     nav {
-        padding: 1.0625rem 1.5rem;
+        position: relative;
+        padding-top: 1.0625rem;
+        padding-bottom: 1.0625rem;
+        background-color: #fff;
     }
 
     &__logo {
@@ -45,7 +48,7 @@
 
     }
 
-    &__menu {
+    &__toggle {
 
         > span {
             display: block;
@@ -60,8 +63,24 @@
             }
         }
 
-    
+    }
 
+    &__menu {
+        position: absolute;
+        width: calc(100% - 3rem);
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 1.5rem;
+        background: $white;
+        padding: 1.625rem;
+        border-radius: 5px;
+
+        a {
+            display: block;
+            padding: 0.625rem;
+            text-align: center;
+            color: $darkBlue;
+        }
     }
 
     &__links {
@@ -100,16 +119,6 @@
 
         
 
-    }
-
-    .cta {
-        font-size: $font-sm;
-        color: $white;
-        transition: opacity 300ms ease-in-out;
-
-        &:hover {
-            opacity: 0.75;
-        }
     }
 
 }
