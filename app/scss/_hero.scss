@@ -1,6 +1,7 @@
 .hero {
 
     background-color: $veryLightGray;
+    overflow: hidden;
 
     .container {
         @include breakpoint-up(large) {
@@ -86,18 +87,6 @@
             flex: 2;
             order: 1;
             text-align: left;
-        }
-
-        h1 {
-            font-weight: 300;
-            font-size: 2.32rem;
-            line-height: 1.2;
-            color: $darkBlue;
-            margin-bottom: 1.5rem;
-
-            @include breakpoint-up(large) {
-                font-size: $font-xlg;
-            }
         }
 
         p {
